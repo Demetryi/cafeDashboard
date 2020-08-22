@@ -15,15 +15,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "_assets": ["./src/assets"],
-      "_components": ["./src/components"],
-      "_navigations": ["./src/navigations"],
-      "_scenes": ["./src/scenes"],
-      "_services": ["./src/services"],
-      "_styles": ["./src/styles"],
-      "_utils": ["./src/utils"],
-      "_store": ["./src/store"],
-      "_localization": ["./src/localization"]
+      "_assets/*": ["./src/assets/*"],
+      "_components/*": ["./src/components/*"],
+      "_scenes/*": ["./src/scenes/*"],
+      "_services/*": ["./src/services/*"],
+      "_styles/*": ["./src/styles/*"],
+      "_utils/*": ["./src/utils/*"]
     },
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,

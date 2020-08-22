@@ -1,6 +1,7 @@
 import {AppProps} from 'next/app';
 import {ReactElement} from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import {CssBaseline} from '@material-ui/core';
+import Layout from '_components/layout';
 import 'fontsource-roboto';
 import Head from 'next/head';
 
@@ -15,7 +16,9 @@ export default function App({Component, pageProps}: AppProps): ReactElement {
         />
       </Head>
       <CssBaseline />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

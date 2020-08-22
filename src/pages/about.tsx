@@ -5,9 +5,9 @@ export default function Home(): ReactElement {
   return (
     <div>
       <Head>
-        <title>Cafe Dashboard</title>
+        <title>About Cafe Dashboard</title>
       </Head>
-      <p data-testid="text">Some text</p>
+      <p data-testid="text">Here will be information about this Admin Panel</p>
     </div>
   );
 }
