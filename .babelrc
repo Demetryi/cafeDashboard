@@ -5,7 +5,7 @@
       "module-resolver",
       {
         "root": ["./src"],
-        "extensions": [".js"],
+        "extensions": [".js", "jsx", "ts", "tsx"],
         "alias": {
           "_assets": "./src/assets",
           "_components": "./src/components",
