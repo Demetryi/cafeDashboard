@@ -34,9 +34,4 @@ module.exports = {
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',
   ],
-  setupFilesAfterEnv: ['./__mocks'],
-  moduleNameMapper: {
-    __mocks: '<rootDir>/__mocks',
-    '\\.(css|less|scss)$': 'identity-obj-proxy',
-  },
 };
