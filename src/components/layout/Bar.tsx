@@ -17,7 +17,7 @@ export function Bar(): ReactElement {
         <IconButton
           edge="start"
           color="inherit"
-          aria-label="toggle drawer"
+          aria-label="Show drawer"
           onClick={show}
           className={clsx(
             classes.menuButton,

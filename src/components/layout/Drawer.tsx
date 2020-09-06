@@ -16,9 +16,10 @@ export function AppDrawer(): ReactElement {
       classes={{
         paper: clsx(classes.drawerPaper, !visible && classes.drawerPaperClose),
       }}
-      open={visible}>
+      open={visible}
+      data-testid={"Drawer"}>
       <div className={classes.toolbarIcon}>
-        <IconButton onClick={hide}>
+        <IconButton onClick={hide} aria-label="Hide drawer">
           <ChevronLeftIcon />
         </IconButton>
       </div>
