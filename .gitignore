@@ -33,5 +33,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-#VSCode
+#IDE
 .vscode
+.idea

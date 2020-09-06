@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import {ReactElement} from 'react';
 
-export default function Home(): ReactElement {
+export default function About(): ReactElement {
   return (
     <div>
       <Head>
