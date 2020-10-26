@@ -14,16 +14,8 @@ const firebaseConfig = {
 };
 
 export default function initFirebase(): void {
-  if (!firebase.apps.length) {
+  if (typeof window !== 'undefined' && !firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    // try {
-    //   firebase.initializeApp(firebaseConfig);
-    //   firebase.analytics();
-    // } catch (err) {
-    //   if (!/already exists/.test(err.message)) {
-    //     console.error('Firebase initialization error', err.stack);
-    //   }
-    // }
   }
 }
