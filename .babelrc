@@ -9,6 +9,8 @@
         "alias": {
           "_assets": "./src/assets",
           "_components": "./src/components",
+          "_hooks": "./src/hooks",
+          "_utils/*": "./src/utils",
           "_styles": "./src/styles"
         }
       }

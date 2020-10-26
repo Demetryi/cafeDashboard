@@ -1,9 +1,11 @@
+import {ReactNode, ReactElement} from 'react';
 import {Bar} from './Bar';
 import {AppDrawer} from './Drawer';
-import {AppContextProvider} from '_components/hooks';
-import {ReactNode, ReactElement} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Container, Paper, Card, CardContent} from '@material-ui/core';
+import {useUser} from '_hooks/useUser';
+import {useRouter} from 'next/router';
+import {useAppContext} from '_hooks/useAppContext';
 
 interface ILayout {
   children: ReactNode;
@@ -11,20 +13,27 @@ interface ILayout {
 
 export default function Layout({children}: ILayout): ReactElement {
   const classes = useStyles();
+  const router = useRouter();
+  useUser();
+  const context = useAppContext();
+  const {user} = context;
+  const isNeedRedirect = !user && router && router.route !== '/auth';
+  if (isNeedRedirect && typeof window !== 'undefined') {
+    router.push('/auth');
+  }
+  if (isNeedRedirect) return null
   return (
     <div className={classes.root}>
-      <AppContextProvider>
-        <Bar />
-        <AppDrawer />
-        <Paper component="main" elevation={0} className={classes.page}>
-          <div className={classes.appBarSpacer} />
-          <Container maxWidth="lg" className={classes.container}>
-            <Card className={classes.content}>
-              <CardContent>{children}</CardContent>
-            </Card>
-          </Container>
-        </Paper>
-      </AppContextProvider>
+      <Bar />
+      <AppDrawer />
+      <Paper component="main" elevation={0} className={classes.page} square>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <Card className={classes.content} elevation={2}>
+            <CardContent>{children}</CardContent>
+          </Card>
+        </Container>
+      </Paper>
     </div>
   );
 }

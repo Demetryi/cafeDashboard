@@ -3,13 +3,13 @@ import {ReactElement} from 'react';
 import {Drawer, Divider, IconButton, List} from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
-import {useAppContext} from '_components/hooks';
+import {useAppContext} from '_hooks/index';
 import {mainListItems, secondaryListItems} from './ListItems';
 
 export function AppDrawer(): ReactElement {
   const classes = useStyles();
   const context = useAppContext();
-  const {visible, hide} = context;
+  const {visible, hideDrawer} = context;
   return (
     <Drawer
       variant="permanent"
@@ -19,7 +19,7 @@ export function AppDrawer(): ReactElement {
       open={visible}
       data-testid={"Drawer"}>
       <div className={classes.toolbarIcon}>
-        <IconButton onClick={hide} aria-label="Hide drawer">
+        <IconButton onClick={hideDrawer} aria-label="Hide drawer">
           <ChevronLeftIcon />
         </IconButton>
       </div>

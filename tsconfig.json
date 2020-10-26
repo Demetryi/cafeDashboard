@@ -17,7 +17,7 @@
     "paths": {
       "_assets/*": ["./src/assets/*"],
       "_components/*": ["./src/components/*"],
-      "_scenes/*": ["./src/scenes/*"],
+      "_hooks/*": ["./src/hooks/*"],
       "_services/*": ["./src/services/*"],
       "_styles/*": ["./src/styles/*"],
       "_utils/*": ["./src/utils/*"]
