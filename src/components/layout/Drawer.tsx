@@ -4,12 +4,12 @@ import {Drawer, Divider, IconButton, List} from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
 import {useAppContext} from '_hooks/index';
-import {mainListItems, secondaryListItems} from './ListItems';
+import {MainListItems, SecondaryListItems} from './ListItems';
 
 export function AppDrawer(): ReactElement {
   const classes = useStyles();
   const context = useAppContext();
-  const {visible, hideDrawer} = context;
+  const {visible, hideDrawer, user} = context;
   return (
     <Drawer
       variant="permanent"
@@ -17,16 +17,17 @@ export function AppDrawer(): ReactElement {
         paper: clsx(classes.drawerPaper, !visible && classes.drawerPaperClose),
       }}
       open={visible}
-      data-testid={"Drawer"}>
+      data-testid={'Drawer'}>
       <div className={classes.toolbarIcon}>
         <IconButton onClick={hideDrawer} aria-label="Hide drawer">
           <ChevronLeftIcon />
         </IconButton>
       </div>
       <Divider />
-      <List>{mainListItems}</List>
-      <Divider />
-      <List>{secondaryListItems}</List>
+      <List component="nav">
+        <MainListItems />
+        {user && <SecondaryListItems />}
+      </List>
     </Drawer>
   );
 }

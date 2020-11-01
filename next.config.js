@@ -1,4 +1,8 @@
 module.exports = {
+  i18n: {
+    locales: ['ru', 'en', 'ua'],
+    defaultLocale: 'ru',
+  },
   env: {
     apiKey: 'AIzaSyA_lMLl21aHyJMboafDPFG83x8cIuKIc7Y',
     projectId: 'cafe-phone',

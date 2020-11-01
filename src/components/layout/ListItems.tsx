@@ -1,18 +1,20 @@
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-// import BarChartIcon from '@material-ui/icons/BarChart';
+import BarChartIcon from '@material-ui/icons/BarChart';
 // import LayersIcon from '@material-ui/icons/Layers';
 // import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import InfoIcon from '@material-ui/icons/Info';
 import PeopleIcon from '@material-ui/icons/People';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import Link from 'next/link';
 import {Button} from '@material-ui/core';
+import {ReactElement} from 'react';
 
-export const mainListItems = (
-  <div>
+export const MainListItems = (): ReactElement => (
+  <>
     <ListItem>
       <Link href="/" passHref>
         <Button fullWidth>
@@ -27,35 +29,56 @@ export const mainListItems = (
       <Link href="/about" passHref>
         <Button fullWidth>
           <ListItemIcon>
-            <PeopleIcon />
+            <InfoIcon />
           </ListItemIcon>
           <ListItemText primary="About" />
         </Button>
       </Link>
     </ListItem>
-  </div>
+  </>
 );
 
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Current month" />
+export const SecondaryListItems = (): ReactElement => (
+  <>
+    <ListItem>
+      <Link href="/" passHref>
+        <Button fullWidth>
+          <ListItemIcon>
+            <AccountTreeIcon />
+          </ListItemIcon>
+          <ListItemText primary="Managers" />
+        </Button>
+      </Link>
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+    <ListItem>
+      <Link href="/" passHref>
+        <Button fullWidth>
+          <ListItemIcon>
+            <PeopleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Managers" />
+        </Button>
+      </Link>
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+    <ListItem>
+      <Link href="/" passHref>
+        <Button fullWidth>
+          <ListItemIcon>
+            <BarChartIcon />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </Button>
+      </Link>
     </ListItem>
-  </div>
+    <ListItem>
+      <Link href="/" passHref>
+        <Button fullWidth>
+          <ListItemIcon>
+            <AssignmentIcon />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </Button>
+      </Link>
+    </ListItem>
+  </>
 );

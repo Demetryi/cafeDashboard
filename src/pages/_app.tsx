@@ -6,7 +6,7 @@ import 'fontsource-roboto';
 import Head from 'next/head';
 import {AppContextProvider} from '_hooks/useAppContext';
 
-export default function App({Component, pageProps}: AppProps): ReactElement {
+const App = ({Component, pageProps}: AppProps): ReactElement => {
   return (
     <>
       <Head>
@@ -25,4 +25,6 @@ export default function App({Component, pageProps}: AppProps): ReactElement {
       </AppContextProvider>
     </>
   );
-}
+};
+
+export default App;

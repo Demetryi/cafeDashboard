@@ -12,6 +12,7 @@ export const getUserFromCookie = (): IUser => {
 export const setUserCookie = (user: IUser): void => {
   cookies.set('auth', user, {
     expires: 7,
+    SameSite: "Lax"
   })
 }
 
