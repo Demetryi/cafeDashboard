@@ -1,7 +1,7 @@
 import {AppProps} from 'next/app';
 import {ReactElement} from 'react';
 import {CssBaseline} from '@material-ui/core';
-import Layout from '_components/layout';
+import Layout from '_components/index';
 import 'fontsource-roboto';
 import Head from 'next/head';
 import {AppContextProvider} from '_hooks/useAppContext';

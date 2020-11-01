@@ -20,7 +20,8 @@
       "_hooks/*": ["./src/hooks/*"],
       "_services/*": ["./src/services/*"],
       "_styles/*": ["./src/styles/*"],
-      "_utils/*": ["./src/utils/*"]
+      "_utils/*": ["./src/utils/*"],
+      "_locales/*": ["./public/static/locales/*"]
     },
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,

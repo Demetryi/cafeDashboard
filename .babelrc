@@ -11,7 +11,8 @@
           "_components": "./src/components",
           "_hooks": "./src/hooks",
           "_utils/*": "./src/utils",
-          "_styles": "./src/styles"
+          "_styles": "./src/styles",
+          "_locales/*": "./public/static/locales"
         }
       }
     ],
