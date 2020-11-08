@@ -11,16 +11,23 @@ const Home = (): ReactElement => {
   return user ? (
     <>
       <Head>
-        <title>{user.displayName}-Cafe Dashboard</title>
+        <title>{user.displayName} - Cafe Dashboard</title>
       </Head>
-      <p data-testid="text">{translate.title}</p>
-      <p data-testid="text">{translate.subtitle} {user.displayName}</p>
+      <section>
+        <p data-testid="text">{translate.title}</p>
+        <p data-testid="text">
+          {translate.subtitle} {user.displayName}
+        </p>
+      </section>
     </>
   ) : (
     <>
       <Head>
         <title>Cafe Dashboard</title>
       </Head>
+      <section>
+        <p>Some introduction to app</p>
+      </section>
     </>
   );
 };

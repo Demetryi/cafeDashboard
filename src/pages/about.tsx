@@ -3,11 +3,15 @@ import {ReactElement} from 'react';
 
 export default function About(): ReactElement {
   return (
-    <div>
+    <>
       <Head>
         <title>About Cafe Dashboard</title>
       </Head>
-      <p data-testid="text">Here will be information about this Admin Panel</p>
-    </div>
+      <div>
+        <p data-testid="text">
+          Here will be information about this Admin Panel
+        </p>
+      </div>
+    </>
   );
 }

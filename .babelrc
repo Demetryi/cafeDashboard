@@ -12,7 +12,7 @@
           "_hooks": "./src/hooks",
           "_utils/*": "./src/utils",
           "_styles": "./src/styles",
-          "_locales/*": "./public/static/locales"
+          "_locales/*": "./src/locales"
         }
       }
     ],

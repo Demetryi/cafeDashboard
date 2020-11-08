@@ -21,7 +21,7 @@
       "_services/*": ["./src/services/*"],
       "_styles/*": ["./src/styles/*"],
       "_utils/*": ["./src/utils/*"],
-      "_locales/*": ["./public/static/locales/*"]
+      "_locales/*": ["./src/locales/*"]
     },
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
