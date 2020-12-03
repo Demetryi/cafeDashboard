@@ -16,12 +16,18 @@
     "baseUrl": ".",
     "paths": {
       "_assets/*": ["./src/assets/*"],
+      "_components": ["./src/components/index"],
       "_components/*": ["./src/components/*"],
+      "_hooks": ["./src/hooks/index"],
       "_hooks/*": ["./src/hooks/*"],
+      "_services": ["./src/services/index"],
       "_services/*": ["./src/services/*"],
-      "_styles/*": ["./src/styles/*"],
+      "_utils": ["./src/utils/index"],
       "_utils/*": ["./src/utils/*"],
-      "_locales/*": ["./src/locales/*"]
+      "_locales": ["./src/locales/index"],
+      "_locales/*": ["./src/locales/*"],
+      "_types/*": ["./src/types/*"],
+      "_types": ["./src/types/index"]
     },
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,

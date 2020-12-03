@@ -1,2 +1,2 @@
-export {default} from './routeChecker';
+export {default, isProtectedRoute} from './routeChecker';
 export {unProtectedRoutes} from './constants';

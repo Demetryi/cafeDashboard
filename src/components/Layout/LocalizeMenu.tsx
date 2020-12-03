@@ -18,7 +18,7 @@ import {
 } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
 import {useRouter} from 'next/router';
-import {Languages} from '_locales/index';
+import {Languages} from '_locales';
 
 export function LocalizeMenu(): ReactElement {
   const [open, setOpen] = useState(false);

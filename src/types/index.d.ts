@@ -1,0 +1,1 @@
+export {INet, INetDoc} from './nets';

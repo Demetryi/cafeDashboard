@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import {ReactElement} from 'react';
+import {Typography} from '@material-ui/core';
 import {useAppContext} from '_hooks/useAppContext';
-import {HomeTexts} from '_locales/index';
-import {useTranslate} from '_hooks/index';
+import {HomeTexts} from '_locales';
+import {useTranslate} from '_hooks';
 
 const Home = (): ReactElement => {
   const context = useAppContext();
@@ -14,10 +15,12 @@ const Home = (): ReactElement => {
         <title>{user.displayName} - Cafe Dashboard</title>
       </Head>
       <section>
-        <p data-testid="text">{translate.title}</p>
-        <p data-testid="text">
+        <Typography variant="h4" component="h1" gutterBottom>
+          {translate.title}
+        </Typography>
+        <Typography variant="h5" component="h2">
           {translate.subtitle} {user.displayName}
-        </p>
+        </Typography>
       </section>
     </>
   ) : (
@@ -26,7 +29,10 @@ const Home = (): ReactElement => {
         <title>Cafe Dashboard</title>
       </Head>
       <section>
-        <p>Some introduction to app</p>
+
+        <Typography variant="h4" component="h1">
+          Some introduction to app
+        </Typography>
       </section>
     </>
   );

@@ -6,7 +6,7 @@ import {Container, Paper, Card, CardContent} from '@material-ui/core';
 import {useUser} from '_hooks/useUser';
 import {useRouter} from 'next/router';
 import {useAppContext} from '_hooks/useAppContext';
-import routeChecker from '_utils/index';
+import {isProtectedRoute} from '_utils';
 
 interface ILayout {
   children: ReactNode;
@@ -18,8 +18,7 @@ export default function Layout({children}: ILayout): ReactElement {
   useUser();
   const context = useAppContext();
   const {user} = context;
-  const isNeedRedirect =
-    !user && router && routeChecker.isProtectedRoute(router.route);
+  const isNeedRedirect = !user && router && isProtectedRoute(router.route);
   if (isNeedRedirect && typeof window !== 'undefined') {
     router.push('/auth');
   }

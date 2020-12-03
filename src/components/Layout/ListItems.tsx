@@ -6,7 +6,7 @@ import BuildIcon from '@material-ui/icons/Build';
 import InfoIcon from '@material-ui/icons/Info';
 import Link from 'next/link';
 import {useTranslate} from '_hooks/useTranslate';
-import {LayoutTexts} from '_locales/index';
+import {LayoutTexts} from '_locales';
 
 export const MainListItems = (): ReactElement => {
   const {links} = useTranslate(LayoutTexts);

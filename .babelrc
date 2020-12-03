@@ -12,7 +12,8 @@
           "_hooks": "./src/hooks",
           "_utils/*": "./src/utils",
           "_styles": "./src/styles",
-          "_locales/*": "./src/locales"
+          "_locales/*": "./src/locales",
+          "_types/*": "./src/types"
         }
       }
     ],

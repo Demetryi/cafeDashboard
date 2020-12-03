@@ -3,7 +3,7 @@ import {ReactElement} from 'react';
 import {Drawer, Divider, IconButton, List} from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
-import {useAppContext} from '_hooks/index';
+import {useAppContext} from '_hooks';
 import {MainListItems, SecondaryListItems} from './ListItems';
 
 export function AppDrawer(): ReactElement {
