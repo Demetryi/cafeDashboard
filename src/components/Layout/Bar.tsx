@@ -12,16 +12,14 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {makeStyles} from '@material-ui/core/styles';
-import {useAppContext} from '_hooks/index';
+import {useAppContext} from '_hooks';
 import Link from 'next/link';
 import {LocalizeMenu} from './LocalizeMenu';
-// import {LayoutTexts} from '_locales/LayoutTexts';
 
 export function Bar(): ReactElement {
   const classes = useStyles();
   const context = useAppContext();
   const {visible, showDrawer, toggleTheme, user, clearUser} = context;
-  // const {links} = useTranslate(LayoutTexts);
   return (
     <AppBar
       position="absolute"

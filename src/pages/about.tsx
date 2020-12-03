@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {ReactElement} from 'react';
+import {Typography} from '@material-ui/core';
 
 export default function About(): ReactElement {
   return (
@@ -8,9 +9,9 @@ export default function About(): ReactElement {
         <title>About Cafe Dashboard</title>
       </Head>
       <div>
-        <p data-testid="text">
+        <Typography variant="h4" component="h1" gutterBottom>
           Here will be information about this Admin Panel
-        </p>
+        </Typography>
       </div>
     </>
   );

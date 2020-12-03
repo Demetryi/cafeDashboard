@@ -1,6 +1,6 @@
 import {unProtectedRoutes} from './index';
 
-const isProtectedRoute = (currentRoute: string): boolean => {
+export const isProtectedRoute = (currentRoute: string): boolean => {
   return unProtectedRoutes.indexOf(currentRoute) === -1;
 };
 

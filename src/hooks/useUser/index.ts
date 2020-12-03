@@ -9,7 +9,7 @@ import {
   getUserFromCookie,
 } from './userCookies';
 import mapUserData from './mapUserData';
-import {useAppContext} from '_hooks/index';
+import {useAppContext} from '_hooks';
 import {IUser} from '_hooks/useAppContext/types';
 
 initFirebase();
